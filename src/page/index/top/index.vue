@@ -90,7 +90,7 @@
 </template>
 <script>
 import { mapGetters, mapState } from "vuex";
-import { fullscreenToggel, listenfullscreen } from "@/util/util";
+import { fullscreenToggel, listenfullscreen } from "@/common/util/util";
 import topLock from "./top-lock";
 import topMenu from "./top-menu";
 import topSearch from "./top-search";

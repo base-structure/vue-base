@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  import {getApiList, getApiLogs} from "@/api/logs";
+  import {getApiList, getApiLogs} from "@/data/logs";
   import {mapGetters} from "vuex";
 
   export default {

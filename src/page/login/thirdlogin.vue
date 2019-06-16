@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { openWindow } from "@/util/util";
+import { openWindow } from "@/common/util/util";
 
 export default {
   name: "thirdLogin",

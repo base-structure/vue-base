@@ -1,25 +1,30 @@
 import Vue from 'vue';
-import axios from './router/axios';
+import axios from './common/axios';
 import VueAxios from 'vue-axios';
 import App from './App';
 import router from './router/router';
 import './permission'; // 权限
 import './error'; // 日志
 import store from './store';
-import { loadStyle } from './util/util'
-import * as urls from '@/config/env';
+import { loadStyle } from './common/util/util'
+import * as urls from '@/common/config/env';
 import Element from 'element-ui';
 import {
     iconfontUrl,
     iconfontVersion
-} from '@/config/env';
+} from '@/common/config/env';
 import i18n from './lang' // Internationalization
 import './styles/common.scss';
+
+require('./data/mock/index.js')
 
 import basicContainer from './components/basic-container/main'
 
 Vue.use(router)
-Vue.use(VueAxios, axios)
+
+Vue.use(VueAxios, axios);
+Vue.prototype.$axios = axios;
+
 Vue.use(Element, {
     i18n: (key, value) => i18n.t(key, value)
 })

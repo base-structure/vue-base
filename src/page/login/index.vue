@@ -40,8 +40,8 @@ import userLogin from "./userlogin";
 import codeLogin from "./codelogin";
 import thirdLogin from "./thirdlogin";
 import { mapGetters } from "vuex";
-import { dateFormat } from "@/util/date";
-import { validatenull } from "@/util/validate";
+import { dateFormat } from "@/common/util/date";
+import { validatenull } from "@/common/util/validate";
 import topLang from "@/page/index/top/top-lang";
 import topColor from "@/page/index/top/top-color";
 export default {

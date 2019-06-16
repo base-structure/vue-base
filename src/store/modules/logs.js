@@ -1,6 +1,6 @@
-import { setStore, getStore } from '@/util/store'
-import { dateFormat } from '@/util/date'
-import { sendLogs } from '@/api/user'
+import { setStore, getStore } from '@/common/util/store'
+import { dateFormat } from '@/common/util/date'
+import { sendLogs } from '@/data/user'
 const logs = {
     state: {
         logsList: getStore({ name: 'logsList' }) || [],

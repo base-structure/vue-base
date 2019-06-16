@@ -71,7 +71,7 @@
     removeStore,
     clearStore,
     getAllStore
-  } from "@/util/store";
+  } from "@/common/util/store";
 
   export default {
     name: "store",

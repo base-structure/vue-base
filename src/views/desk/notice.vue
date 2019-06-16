@@ -33,7 +33,7 @@
 </template>
 
 <script>
-  import {getList, remove, update, add, getNotice} from "@/api/dept/notice";
+  import {getList, remove, update, add, getNotice} from "@/data/dept/notice";
   import {mapGetters} from "vuex";
 
   export default {

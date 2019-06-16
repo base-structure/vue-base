@@ -1,6 +1,6 @@
-import { setStore, getStore } from '@/util/store'
-import { diff } from '@/util/util'
-import website from '@/config/website'
+import { setStore, getStore } from '@/common/util/store'
+import { diff } from '@/common/util/util'
+import website from '@/common/config/website'
 const isFirstPage = website.isFirstPage;
 const tagWel = website.fistPage;
 const tagObj = {

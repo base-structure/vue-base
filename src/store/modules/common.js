@@ -2,8 +2,8 @@ import {
     setStore,
     getStore,
     removeStore
-} from '@/util/store'
-import website from '@/config/website'
+} from '@/common/util/store'
+import website from '@/common/config/website'
 const common = {
 
     state: {

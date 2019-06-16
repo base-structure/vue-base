@@ -18,14 +18,14 @@ module.exports = {
       .add('classlist-polyfill')
       .end()
     entry
-      .add('@/mock')
+      .add('@/data/mock')
       .end()
   },
   devServer: {
     // 反向代理配置
     proxy: {
       '/api': {
-        target: 'http://localhost',
+        target: 'http://localhost:8080',
         ws: true,
         pathRewrite: {
           '^/api': '/'

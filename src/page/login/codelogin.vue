@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import { isvalidatemobile } from "@/util/validate";
+import { isvalidatemobile } from "@/common/util/validate";
 import { mapGetters } from "vuex";
 export default {
   name: "codelogin",

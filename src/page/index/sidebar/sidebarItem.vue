@@ -40,7 +40,7 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import { validatenull } from "@/util/validate";
+import { validatenull } from "@/common/util/validate";
 import config from "./config.js";
 export default {
   name: "sidebarItem",

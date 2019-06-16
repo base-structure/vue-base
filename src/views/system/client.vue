@@ -29,7 +29,7 @@
 </template>
 
 <script>
-  import {getList, getDetail, add, update, remove} from "@/api/system/client";
+  import {getList, getDetail, add, update, remove} from "@/data/system/client";
   import {mapGetters} from "vuex";
 
   export default {

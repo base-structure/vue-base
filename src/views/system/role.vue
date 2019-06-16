@@ -59,9 +59,9 @@ import {
   grantTree,
   getRole,
   getRoleTree
-} from "@/api/system/role";
+} from "@/data/system/role";
 import { mapGetters } from "vuex";
-import website from '@/config/website';
+import website from '@/common/config/website';
 
 export default {
   data() {

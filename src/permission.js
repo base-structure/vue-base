@@ -4,8 +4,8 @@
  */
 import router from './router/router'
 import store from './store'
-import { validatenull } from '@/util/validate'
-import { getToken } from '@/util/auth'
+import { validatenull } from '@/common/util/validate'
+import { getToken } from '@/common/util/auth'
 import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css' // progress bar style
 NProgress.configure({ showSpinner: false });

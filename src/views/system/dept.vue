@@ -36,9 +36,9 @@
     add,
     getDept,
     getDeptTree
-  } from "@/api/system/dept";
+  } from "@/data/system/dept";
   import {mapGetters} from "vuex";
-  import website from '@/config/website';
+  import website from '@/common/config/website';
 
   export default {
     data() {

@@ -42,10 +42,10 @@ import { mapGetters } from "vuex";
 import tags from "./tags";
 import top from "./top/";
 import sidebar from "./sidebar/";
-import admin from "@/util/admin";
-// import { validatenull } from "@/util/validate";
-// import { calcDate } from "@/util/date.js";
-// import { getStore } from "@/util/store.js";
+import admin from "@/common/util/admin";
+// import { validatenull } from "@/common/util/validate";
+// import { calcDate } from "@/common/util/date.js";
+// import { getStore } from "@/common/util/store.js";
 export default {
   components: {
     top,

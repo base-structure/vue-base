@@ -52,11 +52,11 @@
     update,
     add,
     resetPassword
-  } from "@/api/system/user";
-  import {getDeptTree} from "@/api/system/dept";
-  import {getRoleTree} from "@/api/system/role";
+  } from "@/data/system/user";
+  import {getDeptTree} from "@/data/system/dept";
+  import {getRoleTree} from "@/data/system/role";
   import {mapGetters} from "vuex";
-  import website from '@/config/website';
+  import website from '@/common/config/website';
 
   export default {
     data() {

@@ -36,7 +36,7 @@
     add,
     getDict,
     getDictTree
-  } from "@/api/system/dict";
+  } from "@/data/system/dict";
   import {mapGetters} from "vuex";
 
   export default {

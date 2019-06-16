@@ -36,7 +36,7 @@
 </template>
 
 <script>
-  import {getList, getCode, build, remove, add, update} from "@/api/tool/code";
+  import {getList, getCode, build, remove, add, update} from "@/data/tool/code";
   import {mapGetters} from "vuex";
 
   export default {

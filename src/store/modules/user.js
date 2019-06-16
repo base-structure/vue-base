@@ -1,11 +1,9 @@
-import { setToken, removeToken } from '@/util/auth'
-import { setStore, getStore } from '@/util/store'
-import { isURL, validatenull } from '@/util/validate'
-import { deepClone } from '@/util/util'
-import webiste from '@/config/website'
-import { loginByUsername, getUserInfo, getMenu, getTopMenu, logout, refeshToken, getButtons } from '@/api/user'
-// mork
-import mockData from '@/mock/data'
+import { setToken, removeToken } from '@/common/util/auth'
+import { setStore, getStore } from '@/common/util/store'
+import { isURL, validatenull } from '@/common/util/validate'
+import { deepClone } from '@/common/util/util'
+import webiste from '@/common/config/website'
+import { loginByUsername, getUserInfo, getMenu, getTopMenu, logout, refeshToken, getButtons } from '@/data/user'
 
 function addPath(ele, first) {
     const menu = webiste.menu;
@@ -42,33 +40,23 @@ const user = {
         //根据用户名登录
         LoginByUsername({ commit }, userInfo) {
             return new Promise((resolve) => {
-                // loginByUsername(userInfo.tenantCode, userInfo.username, userInfo.password, userInfo.type).then(res => {
-                //     const data = res.data.data;
-                //     commit('SET_TOKEN', data.accessToken);
-                //     commit('SET_USERIFNO', data);
-                //     commit('DEL_ALL_TAG');
-                //     commit('CLEAR_LOCK');
-                //     resolve();
-                // })
-                console.log(userInfo)
-                commit('SET_TOKEN', mockData.token);
-                commit('SET_USERIFNO', mockData.token);
-                commit('DEL_ALL_TAG');
-                commit('CLEAR_LOCK');
-                resolve();
+                loginByUsername(userInfo.tenantCode, userInfo.username, userInfo.password, userInfo.type).then(res => {
+                    const data = res.data.data;
+                    commit('SET_TOKEN', data.access_token);
+                    commit('SET_USERIFNO', data);
+                    commit('DEL_ALL_TAG');
+                    commit('CLEAR_LOCK');
+                    resolve();
+                })
             })
         },
         GetButtons({ commit }) {
             return new Promise((resolve) => {
-                // getButtons().then(res => {
-                //     const data = res.data.data;
-                //     commit('SET_PERMISSION', data);
-                //     resolve();
-                // })
-                console.log(mockData.buttons.data)
-                const data = mockData.buttons.data;
-                commit('SET_PERMISSION', data);
-                resolve();
+                getButtons().then(res => {
+                    const data = res.data.data;
+                    commit('SET_PERMISSION', data);
+                    resolve();
+                })
             })
         },
         //根据手机号登录
@@ -145,24 +133,16 @@ const user = {
         //获取系统菜单
         GetMenu({ commit, dispatch }, parentId) {
             return new Promise(resolve => {
-                // getMenu(parentId).then((res) => {
-                //     const data = res.data.data
-                //     let menu = deepClone(data);
-                //     menu.forEach(ele => {
-                //         addPath(ele, true);
-                //     })
-                //     commit('SET_MENU', menu)
-                //     dispatch('GetButtons');
-                //     resolve(menu)
-                // })
-                console.log(getMenu, getButtons, parentId)
-                let menu = deepClone(mockData.menu.data);
-                menu.forEach(ele => {
-                    addPath(ele, true);
+                getMenu(parentId).then((res) => {
+                    const data = res.data.data
+                    let menu = deepClone(data);
+                    menu.forEach(ele => {
+                        addPath(ele, true);
+                    })
+                    commit('SET_MENU', menu)
+                    dispatch('GetButtons');
+                    resolve(menu)
                 })
-                commit('SET_MENU', menu)
-                dispatch('GetButtons');
-                resolve(menu)
             })
         },
     },

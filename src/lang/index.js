@@ -4,7 +4,7 @@ import elementEnLocale from 'element-ui/lib/locale/lang/en' // element-ui lang
 import elementZhLocale from 'element-ui/lib/locale/lang/zh-CN'// element-ui lang
 import enLocale from './en'
 import zhLocale from './zh'
-import { getStore } from '@/util/store'
+import { getStore } from '@/common/util/store'
 Vue.use(VueI18n)
 const Avue = window.AVUE;
 const messages = {

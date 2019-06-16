@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import option from "@/const/user/info";
+  import option from "@/common/const/user/info";
 
   export default {
     data() {

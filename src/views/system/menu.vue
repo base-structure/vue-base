@@ -35,9 +35,9 @@
 </template>
 
 <script>
-  import {getList, remove, update, add, getMenu} from "@/api/system/menu";
+  import {getList, remove, update, add, getMenu} from "@/data/system/menu";
   import {mapGetters} from "vuex";
-  import iconList from "@/config/iconList";
+  import iconList from "@/common/config/iconList";
 
   export default {
     data() {

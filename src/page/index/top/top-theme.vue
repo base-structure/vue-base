@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { setTheme } from "@/util/util";
+import { setTheme } from "@/common/util/util";
 import { mapGetters } from "vuex";
 export default {
   data() {

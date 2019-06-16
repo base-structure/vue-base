@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { validatenull } from "@/util/validate";
+import { validatenull } from "@/common/util/validate";
 import { mapGetters } from "vuex";
 export default {
   name: "top-lock",
