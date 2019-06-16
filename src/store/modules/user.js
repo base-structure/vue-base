@@ -25,8 +25,8 @@ function addPath(ele, first) {
             addPath(child);
         })
     }
-
 }
+
 const user = {
     state: {
         userInfo: getStore({ name: 'userInfo' }) || [],

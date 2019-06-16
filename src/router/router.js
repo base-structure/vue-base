@@ -7,12 +7,12 @@
  * isAuth是否需要授权
  */
 import VueRouter from 'vue-router';
-import PageRouter from './page/'
-import ViewsRouter from './views/'
-import AvueRouter from './avue-router';
+import PageRouter from './page'
+import ViewsRouter from './views'
+import AvueRouter from './router-util';
 import Vue from 'vue';
 import i18n from '@/lang' // Internationalization
-import Store from '../store/';
+import Store from '../store';
 let Router = new VueRouter({
     scrollBehavior(to, from, savedPosition) {
         if (savedPosition) {
@@ -31,5 +31,8 @@ let Router = new VueRouter({
 });
 AvueRouter.install(Vue, Router, Store, i18n);
 Router.$avueRouter.formatRoutes(Store.state.user.menu, true);
-Router.addRoutes([...PageRouter, ...ViewsRouter]);
+Router.addRoutes([
+    ...PageRouter,
+    ...ViewsRouter
+]);
 export default Router;
