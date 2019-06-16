@@ -16,7 +16,7 @@ const common = {
         showTag: true,
         showDebug: true,
         showCollapse: true,
-        showSearch: true,
+        showSearch: false,
         showLock: true,
         showFullScren: true,
         showTheme: true,
