@@ -23,7 +23,7 @@ export default [{
             i18n: 'test'
         },
         component: () =>
-            import( /* webpackChunkName: "views" */ '@/views/util/test')
+            import( /* webpackChunkName: "views" */ '@/views/common/test')
     }]
 }, {
     path: '/info',
