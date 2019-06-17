@@ -11,6 +11,7 @@ const tagObj = {
     meta: {},//额外参数
     group: [], //分组
 }
+
 //处理首个标签
 function setFistTag(list) {
     if (list.length == 1) {
@@ -25,7 +26,6 @@ function setFistTag(list) {
         })
     }
 }
-
 
 const navs = {
     state: {
@@ -69,4 +69,5 @@ const navs = {
         },
     }
 }
+
 export default navs

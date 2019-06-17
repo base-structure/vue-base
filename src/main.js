@@ -3,8 +3,8 @@ import axios from './common/axios';
 import VueAxios from 'vue-axios';
 import App from './App';
 import router from './router/router';
-import './permission'; // 权限
-import './error'; // 日志
+import './permission';
+import './error';
 import store from './store';
 import { loadStyle } from './common/util/util'
 import * as urls from '@/common/config/env';
@@ -13,7 +13,7 @@ import {
     iconfontUrl,
     iconfontVersion
 } from '@/common/config/env';
-import i18n from './lang' // Internationalization
+import i18n from './lang'
 import './styles/common.scss';
 
 require('./data/mock/index.js')
@@ -31,8 +31,9 @@ Vue.use(Element, {
 Vue.use(window.AVUE, {
     i18n: (key, value) => i18n.t(key, value)
 })
-//注册全局容器
+
 Vue.component('basicContainer', basicContainer)
+
 // 加载相关url地址
 Object.keys(urls).forEach(key => {
     Vue.prototype[key] = urls[key];

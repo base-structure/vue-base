@@ -1,17 +1,16 @@
-/**
- * 全站权限配置
- *
- */
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 import router from './router/router'
 import store from './store'
 import { validatenull } from '@/common/util/validate'
 import { getToken } from '@/common/util/auth'
-import NProgress from 'nprogress' // progress bar
-import 'nprogress/nprogress.css' // progress bar style
+
 NProgress.configure({ showSpinner: false });
 const lockPage = store.getters.website.lockPage; //锁屏页
+
 router.beforeEach((to, from, next) => {
-    //缓冲设置
+    // 缓冲设置
     if (to.meta.keepAlive === true && store.state.tags.tagList.some(ele => {
         return ele.value === to.fullPath;
     })) {
@@ -24,6 +23,7 @@ router.beforeEach((to, from, next) => {
             to.meta.$keepAlive = false;
         }
     }
+
     const meta = to.meta || {};
     if (getToken()) {
         if (store.getters.isLock && to.path != lockPage) { //如果系统激活锁屏，全部跳转到锁屏页
